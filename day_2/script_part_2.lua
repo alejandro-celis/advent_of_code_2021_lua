@@ -10,7 +10,7 @@ for line in io.lines(file_path) do
 
     if direction == FORWARD then
         horizontal = horizontal + size
-        depth = depth  + aim * size
+        depth = depth + aim * size
     elseif direction == UP then
         aim = aim - size
     elseif direction == DOWN then
