@@ -14,9 +14,9 @@ for line in io.lines(file_path) do
 end
 
 for i = 1, #arr do
-    gamma = gamma .. math.floor(arr[i] / j + 0.5)
-    epsilon = epsilon .. (1 - math.floor(arr[i] / j + 0.5))
+    local binary_rep = math.floor(arr[i] / j + 0.5)
+    gamma = gamma .. binary_rep 
+    epsilon = epsilon .. (1 - binary_rep)
 end
 
 print(tonumber(gamma, 2) * tonumber(epsilon, 2))
-
