@@ -5,10 +5,7 @@ local j = 1
 
 for line in io.lines(file_path) do
     for i = 1, #line do
-        if not arr[i] then
-            arr[i] = 0
-        end
-        arr[i] = arr[i] + line:sub(i, i)
+        arr[i] = (arr[i] or 0) + line:sub(i, i)
     end
     j = j + 1
 end
